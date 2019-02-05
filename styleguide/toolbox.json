@@ -1,0 +1,34 @@
+{
+  "src": "assets/",
+  "dest": "../web/app/themes/wise/resources/dist/",
+  "ghpages": "dist/",
+  "remote": "",
+  "images": [
+    "dist/images/**/*"
+  ],
+  "svg": [
+    "dist/svg/**/*"
+  ],
+  "icons": [
+    "dist/icons/**/*"
+  ],
+  "iconsFontName": "icon",
+  "fonts": [
+    "dist/fonts/**/*"
+  ],
+  "vendors": {
+    "css": [],
+    "js": [
+      "node_modules/bootstrap/js/dist/alert.js",
+      "node_modules/bootstrap/js/dist/button.js",
+      "node_modules/bootstrap/js/dist/collapse.js",
+      "node_modules/bootstrap/js/dist/dropdown.js",
+      "node_modules/bootstrap/js/dist/tab.js",
+      "node_modules/bootstrap/js/dist/util.js"
+    ]
+  },
+  "singles": [{
+    "src": "",
+    "dest": ""
+  }]
+}
