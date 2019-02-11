@@ -3,7 +3,7 @@
     "promptValues": {
       "repo": "https://github.com/knuch/manivelle.git",
       "atomic": "atoms<molecules<organisms",
-      "src": "assets",
+      "src": "assets/",
       "dest": "dist"
     }
   }

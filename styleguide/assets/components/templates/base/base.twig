@@ -1,0 +1,38 @@
+
+{% block header %}
+  {% include '@organisms/header/header.twig' %}
+{% endblock %}
+
+{% block hero %}
+  {% include "@atoms/hero/hero.twig" %}
+{% endblock %}
+
+<div class="main-container">
+  {% block breadcrumb %}
+    <div class="container">
+      {% include "@organisms/breadcrumb/breadcrumb.twig" %}
+    </div>
+  {% endblock %}
+
+  {% block title %}
+  <div class="container main-title">
+    <h1>Title</h1>
+  </div>
+  {% endblock %}
+
+  <main class="container" role="main">
+    <div class="row">
+      <div class="sidebar col-md-4">
+        {% block sidebar %}
+          {% include "@organisms/sidebar/sidebar.twig" %}
+        {% endblock %}
+      </div>
+      <div class="content col-md-8">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer py-5"></footer>
+</div>

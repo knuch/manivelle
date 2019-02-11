@@ -1,0 +1,36 @@
+@charset 'utf-8';
+
+.main-nav {
+  ol {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    @include media-breakpoint-up(lg) {
+      margin-right: 0.5rem;
+    }
+  }
+
+  a {
+    padding: 0 0.8rem;
+    font-size: $font-size-base * 1;
+    color: $black;
+    transition: 0.3s ease;
+
+    @include media-breakpoint-up(lg) {
+      padding: 0.5rem 1rem;
+    }
+
+    &:hover {
+      color: $maniv;
+    }
+  }
+
+  a.active {
+    color: $maniv;
+  }
+}

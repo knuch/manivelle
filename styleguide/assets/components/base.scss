@@ -11,10 +11,15 @@
 
 //
 // atoms:
+@import 'atoms/logo/logo';
+@import 'atoms/hero/hero';
 
 //
 // molecules:
+@import 'molecules/nav/nav';
 
 //
 // organisms:
-
+@import 'organisms/header/header';
+@import 'organisms/breadcrumb/breadcrumb';
+@import 'organisms/sidebar/sidebar';
