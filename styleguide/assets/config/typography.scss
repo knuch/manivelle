@@ -14,10 +14,21 @@ body {
   margin-bottom: 3rem;
 }
 
+.main-container {
+  padding: 0 1rem;
+
+  @include media-breakpoint-up(md) {
+    padding: 0;
+  }
+}
+
 .content {
   display: grid;
-  grid-template-areas: "wide narrow wide";
-  grid-template-columns: [full-start] 1fr [content-start] 570px [content-end] 1fr [full-end];
+  grid-template-columns: [full-start] [content-start] 1fr [content-end] [full-end];
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: [full-start] 1fr [content-start] 570px [content-end] 1fr [full-end];
+    }
 
   & > *,
   .grid-content {
