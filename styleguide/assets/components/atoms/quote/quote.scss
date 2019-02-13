@@ -1,0 +1,42 @@
+@charset 'utf-8';
+
+.content blockquote {
+  position: relative;
+  margin: 2rem 0 1rem 0;
+  padding: 1rem 2.5rem;
+
+  &:before,
+  &:after {
+    position: absolute;
+    font-family: Times;
+    font-size: 5rem;
+    color: $maniv;
+  }
+
+  &:before {
+    content: '\201C';
+    top: -0.1rem;
+    left: -0.1rem;
+    line-height: 3rem;
+  }
+
+  &:after {
+    content: '\201D';
+    right: 0;
+    bottom: -1.8rem;
+    line-height: 3rem;
+  }
+
+  & + cite {
+    padding: 0 2.5rem;
+    font-size: 90%;
+    margin-top: -1.8rem;
+    margin-bottom: 3.5rem;
+    color: $gray-500;
+
+    &:before {
+      content: '\2014';
+      margin-right: 0.3rem;
+    }
+  }
+}

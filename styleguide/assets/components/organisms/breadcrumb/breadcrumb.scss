@@ -1,1 +1,52 @@
 @charset 'utf-8';
+
+.breadcrumb {
+  padding: 1.2rem 0;
+  background: none;
+  font-size: $font-size-base * 0.85;
+
+  .active {
+    color: $gray-400;
+  }
+}
+
+.breadcrumb-item,
+.breadcrumb-item a {
+  color: $gray-500;
+}
+
+.breadcrumb-item a {
+  position: relative;
+  transition: 0.3s ease;
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    bottom: 8%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: $gray-500;
+    transition: 0.3s ease;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: $gray-600;
+
+    &:before {
+      background: $gray-600;
+    }
+  }
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 0.7rem;
+
+  &:before {
+    content: '>';
+    width: 1.1rem;
+    font-size: 90%;
+    color: $gray-500;
+  }
+}

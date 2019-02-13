@@ -3,6 +3,7 @@
 // init:
 @import '../config/variables';
 @import '../config/bootstrap';
+@import '../config/typography';
 
 // Don't edit the following sections, they should always be preceded by a blank
 // line and have exactly those names for the `$ yo toolbox:generate` command
@@ -13,6 +14,8 @@
 // atoms:
 @import 'atoms/logo/logo';
 @import 'atoms/hero/hero';
+@import 'atoms/image/image';
+@import 'atoms/quote/quote';
 
 //
 // molecules:
