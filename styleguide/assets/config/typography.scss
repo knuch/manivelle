@@ -8,23 +8,20 @@ body {
 }
 
 .main-title h1 {
-  font-size: $font-size-base * 3.3;
+  font-size: $font-size-base * 1.5;
   font-weight: 100;
   color: $maniv;
-  margin-bottom: 3rem;
-}
-
-.main-container {
-  padding: 0 1rem;
+  margin-bottom: 2rem;
 
   @include media-breakpoint-up(md) {
-    padding: 0;
+    margin-bottom: 3rem;
+    font-size: $font-size-base * 3.3;
   }
 }
 
 .content {
   display: grid;
-  grid-template-columns: [full-start] [content-start] 1fr [content-end] [full-end];
+  grid-template-columns: [full-start] 0 [content-start] 1fr [content-end] 0 [full-end];
 
     @include media-breakpoint-up(md) {
       grid-template-columns: [full-start] 1fr [content-start] 570px [content-end] 1fr [full-end];
@@ -49,13 +46,20 @@ body {
   }
 
   ul {
-    padding-left: 2.4rem;
+    padding-left: 1.4rem;
     list-style-type: none;
+
+    @include media-breakpoint-up(md) {
+      padding-left: 2.4rem;
+    }
 
     li {
       position: relative;
       margin-bottom: 0.9rem;
-      width: 93%;
+
+      @include media-breakpoint-up(md) {
+        width: 93%;
+      }
 
       &:before {
         content: ' ';

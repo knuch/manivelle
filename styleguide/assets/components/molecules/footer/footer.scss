@@ -1,0 +1,44 @@
+@charset 'utf-8';
+
+.footer {
+  padding: 9rem 0 1rem;
+
+  .container {
+    @include media-breakpoint-up(md) {
+      border-top: 1px solid $gray-400;
+      padding-top: 1.2rem;
+    }
+  }
+
+  .author,
+  .copyright {
+    font-size: 90%;
+    text-align: center;
+    color: $gray-500;
+  }
+
+  .copyright {
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+  }
+
+  .author {
+    margin-top: 2rem;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
+      text-align: right;
+    }
+
+    a {
+      text-decoration: underline;
+      color: $gray-400;
+      transition: 0.3s ease;
+
+      &:hover {
+        color: $gray-500;
+      }
+    }
+  }
+}
