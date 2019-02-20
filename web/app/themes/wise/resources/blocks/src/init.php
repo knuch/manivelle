@@ -63,19 +63,13 @@ function as_blocks_allowed_block_types( $allowed_blocks, $post = null ) {
 
 	$allowed_blocks = array(
 		'core/paragraph',
-		'core/list',
 		'core/image',
-		'core/gallery',
 		'core/heading',
-		'core/video',
-		'core/table',
+		'core/gallery',
+		'core/list',
 		'core/quote',
-		'as/info',
-		'as/toggles',
-		'as/heading',
-		'as/intro',
-		'as/list-two-col',
-		'as/links'
+		'core/table',
+		'as/intro'
 	);
 
 	if( $post && $post->post_type === 'shortcode_page' ) {

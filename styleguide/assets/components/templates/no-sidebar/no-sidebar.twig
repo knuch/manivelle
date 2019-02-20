@@ -10,7 +10,7 @@
   {% block breadcrumb %}
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-12">
+      <div class="col-md-8">
         {% include "@organisms/breadcrumb/breadcrumb.twig" %}
       </div>
     </div>
@@ -20,7 +20,7 @@
   {% block title %}
   <div class="container main-title">
     <div class="row justify-content-center">
-      <div class="col-12">
+      <div class="col-md-8">
         <h1>Démarche</h1>
       </div>
     </div>
@@ -29,11 +29,6 @@
 
   <main class="container" role="main">
     <div class="row justify-content-center">
-      <div class="sidebar col-md-4 d-none d-md-block">
-        {% block sidebar %}
-        {% include "@organisms/sidebar/sidebar.twig" %}
-        {% endblock %}
-      </div>
       <div class="content col-md-8">
         {% block content %}
         {% endblock %}
