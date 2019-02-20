@@ -1,0 +1,15 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.wp-block-as-list-two-col {
+  display: flex;
+  flex-flow: row nowrap;
+
+  .col {
+    flex: 0 0 50%;
+    padding-left: 1.3rem;
+  }
+}
