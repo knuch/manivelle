@@ -1,20 +1,20 @@
 {
   "src": "assets/",
   "dest": "../web/app/themes/wise/resources/dist/",
-  "ghpages": "dist/",
+  "ghpages": "../web/app/themes/wise/resources/dist/",
   "remote": "",
   "images": [
-    "dist/images/**/*"
+    "../web/app/themes/wise/resources/dist/images/**/*"
   ],
   "svg": [
-    "dist/svg/**/*"
+    "../web/app/themes/wise/resources/dist/svg/**/*"
   ],
   "icons": [
-    "dist/icons/**/*"
+    "../web/app/themes/wise/resources/dist/icons/**/*"
   ],
   "iconsFontName": "icon",
   "fonts": [
-    "dist/fonts/**/*"
+    "../web/app/themes/wise/resources/dist/fonts/**/*"
   ],
   "vendors": {
     "css": [],
