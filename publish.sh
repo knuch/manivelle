@@ -64,8 +64,8 @@ fi
 
 # blocks variables
 BRANCH_BLOCKS="dist/blocks"
-DIRECTORY_ROOT="web/app/themes/evam/resources/blocks"
-DIRECTORY_BLOCKS="web/app/themes/evam/resources/blocks/dist"
+DIRECTORY_ROOT="web/app/themes/wise/resources/blocks"
+DIRECTORY_BLOCKS="web/app/themes/wise/resources/blocks/dist"
 
 # Proceed for blocks =====================================================================
 
