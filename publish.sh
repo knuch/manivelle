@@ -26,11 +26,6 @@ echo "rebuild frontend assets"
 cd $STYLEGUIDE_DIR && yarn && yarn build
 cd ..
 
-echo "update package.json version to $1 and write a copy for publishing"
-npm version $1
-cp package.json $DIRECTORY/package.json
-jq -e ".dependencies = {} | .devDependencies = {}" $DIRECTORY/package.json > $DIRECTORY/package.json.tmp && cp $DIRECTORY/package.json.tmp $DIRECTORY/package.json && rm $DIRECTORY/package.json.tmp
-
 echo "backup dist content"
 mkdir "$DIRECTORY-tmp"
 cp -r $DIRECTORY/* "$DIRECTORY-tmp/"
@@ -54,7 +49,7 @@ rm -rf "$DIRECTORY-tmp"
 echo "Updating $BRANCH branch"
 cd $DIRECTORY && git add --all && git commit -m "Publishing to $BRANCH (publish.sh)"
 git push --force origin $BRANCH --tags
-
+cd ../../../../../..
 
 # blocks variables
 BRANCH_BLOCKS="dist/blocks"
