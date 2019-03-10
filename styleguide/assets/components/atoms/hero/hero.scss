@@ -15,10 +15,6 @@
   }
 
   @include media-breakpoint-up(md) {
-    height: 19rem;
-  }
-
-  @include media-breakpoint-up(lg) {
-    height: 23rem;
+    height: 18rem;
   }
 }

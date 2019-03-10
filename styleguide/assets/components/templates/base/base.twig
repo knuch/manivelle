@@ -21,7 +21,6 @@
   <div class="container main-title">
     <div class="row justify-content-center">
       <div class="col-12">
-        <h1>Démarche</h1>
       </div>
     </div>
   </div>
@@ -30,11 +29,12 @@
   <main class="container" role="main">
     <div class="row justify-content-center">
       <div class="sidebar col-md-4 d-none d-md-block">
+      <h1 class="main-title">Démarche et jeux</h1>
         {% block sidebar %}
         {% include "@organisms/sidebar/sidebar.twig" %}
         {% endblock %}
       </div>
-      <div class="content col-md-8">
+      <div class="content col-md-8 pt-4">
         {% block content %}
         {% endblock %}
       </div>
