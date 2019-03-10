@@ -50,7 +50,7 @@ echo "Updating $BRANCH branch"
 cd $DIRECTORY && git add --all && git commit -m "Publishing to $BRANCH (publish.sh)"
 git push --force origin $BRANCH --tags
 cd ../../../../../..
-
+pwd
 # blocks variables
 BRANCH_BLOCKS="dist/blocks"
 DIRECTORY_ROOT="web/app/themes/wise/resources/blocks"
@@ -61,15 +61,15 @@ DIRECTORY_BLOCKS="web/app/themes/wise/resources/blocks/dist"
 echo "rebuild gutenberg blocks"
 cd $DIRECTORY_ROOT && yarn && yarn build
 cd ../../../../../..
-
+pwd
 echo "backup dist content"
 mkdir "$DIRECTORY_BLOCKS-tmp"
 cp -r $DIRECTORY_BLOCKS/* "$DIRECTORY_BLOCKS-tmp/"
 
 echo "Deleting dist"
 rm -rf $DIRECTORY_BLOCKS
-mkdir $DIRECTORY_BLOCKS
 git worktree prune
+mkdir $DIRECTORY_BLOCKS
 rm -rf .git/worktrees/$DIRECTORY_BLOCKS/
 
 echo "Checking out $BRANCH_BLOCKS branch into dist"
