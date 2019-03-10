@@ -69,6 +69,7 @@ function as_blocks_allowed_block_types( $allowed_blocks, $post = null ) {
 		'core/list',
 		'core/quote',
 		'core/table',
+		'core/columns',
 		'as/intro'
 	);
 
