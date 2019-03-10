@@ -52,14 +52,8 @@ cp -r "$DIRECTORY-tmp"/* $DIRECTORY/
 rm -rf "$DIRECTORY-tmp"
 
 echo "Updating $BRANCH branch"
-if [ $2 ]
-then
-  cd $DIRECTORY && git add --all && git commit -m "Publishing to $BRANCH (publish.sh)"
-  git push --force origin $BRANCH --tags && npm publish
-else
-  cd $DIRECTORY && git add --all && git commit -m "Publishing to $BRANCH (publish.sh)"
-  git push --force origin $BRANCH --tags
-fi
+cd $DIRECTORY && git add --all && git commit -m "Publishing to $BRANCH (publish.sh)"
+git push --force origin $BRANCH --tags
 
 
 # blocks variables
@@ -87,22 +81,16 @@ echo "Checking out $BRANCH_BLOCKS branch into dist"
 git worktree add -B $BRANCH_BLOCKS $DIRECTORY_BLOCKS
 
 echo "Removing existing files"
-rm -rf $DIRECTORY_BLOCKS/*
-rm $DIRECTORY_BLOCKS/.editorconfig
-rm $DIRECTORY_BLOCKS/.env.example
-rm $DIRECTORY_BLOCKS/.gitignore
-rm $DIRECTORY_BLOCKS/.yo-rc.json
+# rm -rf $DIRECTORY_BLOCKS/*
+# rm $DIRECTORY_BLOCKS/.editorconfig
+# rm $DIRECTORY_BLOCKS/.env.example
+# rm $DIRECTORY_BLOCKS/.gitignore
+# rm $DIRECTORY_BLOCKS/.yo-rc.json
 
 echo "Generating dist using the backup"
 cp -r "$DIRECTORY_BLOCKS-tmp"/* $DIRECTORY_BLOCKS/
 rm -rf "$DIRECTORY_BLOCKS-tmp"
 
 echo "Updating $BRANCH_BLOCKS branch"
-if [ $2 ]
-then
-  cd $DIRECTORY_BLOCKS && git add --all && git commit -m "Publishing to $BRANCH_BLOCKS (publish.sh)"
-  git push --force origin $BRANCH_BLOCKS --tags && npm publish
-else
-  cd $DIRECTORY_BLOCKS && git add --all && git commit -m "Publishing to $BRANCH_BLOCKS (publish.sh)"
-  git push --force origin $BRANCH_BLOCKS --tags
-fi
+cd $DIRECTORY_BLOCKS && git add --all && git commit -m "Publishing to $BRANCH_BLOCKS (publish.sh)"
+git push --force origin $BRANCH_BLOCKS --tags
