@@ -27,7 +27,6 @@ cd $STYLEGUIDE_DIR && yarn && yarn build
 cd ..
 
 echo "backup dist content"
-rm -rf "$DIRECTORY-tmp"
 mkdir "$DIRECTORY-tmp"
 cp -r $DIRECTORY/* "$DIRECTORY-tmp/"
 
@@ -50,8 +49,7 @@ rm -rf "$DIRECTORY-tmp"
 echo "Updating $BRANCH branch"
 cd $DIRECTORY && git add --all && git commit -m "Publishing to $BRANCH (publish.sh)"
 git push --force origin $BRANCH --tags
-cd ../../../../../..
-pwd
+
 # blocks variables
 BRANCH_BLOCKS="dist/blocks"
 DIRECTORY_ROOT="web/app/themes/wise/resources/blocks"
@@ -62,7 +60,7 @@ DIRECTORY_BLOCKS="web/app/themes/wise/resources/blocks/dist"
 echo "rebuild gutenberg blocks"
 cd $DIRECTORY_ROOT && yarn && yarn build
 cd ../../../../../..
-pwd
+
 echo "backup dist content"
 mkdir "$DIRECTORY_BLOCKS-tmp"
 cp -r $DIRECTORY_BLOCKS/* "$DIRECTORY_BLOCKS-tmp/"
@@ -77,11 +75,11 @@ echo "Checking out $BRANCH_BLOCKS branch into dist"
 git worktree add -B $BRANCH_BLOCKS $DIRECTORY_BLOCKS
 
 echo "Removing existing files"
-# rm -rf $DIRECTORY_BLOCKS/*
-# rm $DIRECTORY_BLOCKS/.editorconfig
-# rm $DIRECTORY_BLOCKS/.env.example
-# rm $DIRECTORY_BLOCKS/.gitignore
-# rm $DIRECTORY_BLOCKS/.yo-rc.json
+rm -rf $DIRECTORY_BLOCKS/*
+rm $DIRECTORY_BLOCKS/.editorconfig
+rm $DIRECTORY_BLOCKS/.env.example
+rm $DIRECTORY_BLOCKS/.gitignore
+rm $DIRECTORY_BLOCKS/.yo-rc.json
 
 echo "Generating dist using the backup"
 cp -r "$DIRECTORY_BLOCKS-tmp"/* $DIRECTORY_BLOCKS/

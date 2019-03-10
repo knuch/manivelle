@@ -9,10 +9,7 @@ namespace :styleguide do
   task :build_from_git do
     on roles(:app) do
       within release_path + fetch(:app_path) do
-      print ARGV[0]
-        if ARGV[0].include? 'production'
-          execute :git, 'clone', '-b', fetch(:styleguide_branch), repo_url, fetch(:styleguide_path)
-        end
+        execute :git, 'clone', '-b', fetch(:styleguide_branch), repo_url, fetch(:styleguide_path)
       end
     end
   end
