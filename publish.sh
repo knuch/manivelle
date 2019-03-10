@@ -27,6 +27,7 @@ cd $STYLEGUIDE_DIR && yarn && yarn build
 cd ..
 
 echo "backup dist content"
+rm -rf "$DIRECTORY-tmp"
 mkdir "$DIRECTORY-tmp"
 cp -r $DIRECTORY/* "$DIRECTORY-tmp/"
 
@@ -68,8 +69,8 @@ cp -r $DIRECTORY_BLOCKS/* "$DIRECTORY_BLOCKS-tmp/"
 
 echo "Deleting dist"
 rm -rf $DIRECTORY_BLOCKS
-git worktree prune
 mkdir $DIRECTORY_BLOCKS
+git worktree prune
 rm -rf .git/worktrees/$DIRECTORY_BLOCKS/
 
 echo "Checking out $BRANCH_BLOCKS branch into dist"
