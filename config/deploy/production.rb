@@ -20,6 +20,10 @@ server 'lcth.ftp.infomaniak.com', user: 'lcth_ssh_knuch', roles: %w{web app db}
 #    auth_methods: %w(password)
 #  }
 
+# Get the corresponding styleguide & blocks
+after "deploy:finished", "styleguide:build_from_git"
+after "deploy:finished", "blocks:pull_blocks_from_git"
+
 fetch(:default_env).merge!(wp_env: :production)
 
 SSHKit.config.command_map[:composer] = "/opt/php7.2/bin/php -d allow_url_fopen=1 #{shared_path.join("composer.phar")}"
