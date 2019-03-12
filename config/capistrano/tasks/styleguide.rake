@@ -1,7 +1,7 @@
 require 'fileutils'
 
 set :app_path, "web"
-set :styleguide_path, "app/themes/evam/resources/dist"
+set :styleguide_path, "app/themes/wise/resources/dist"
 set :styleguide_branch, "dist/frontend"
 
 namespace :styleguide do

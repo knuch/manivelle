@@ -33,7 +33,7 @@ wp-cli.local.yml
 wp-cli.phar
 
 # Styleguide
-web/app/themes/evam/resources/dist/
+web/app/themes/wise/resources/dist/
 node_modules
 .sass-cache
 .publish
