@@ -1,0 +1,5 @@
+@charset 'utf-8';
+
+.pswp--open + .header {
+  z-index: -1;
+}
