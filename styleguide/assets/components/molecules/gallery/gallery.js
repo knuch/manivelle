@@ -5,19 +5,16 @@ import PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default';
 
 export default () => {
   const openPhotoswipe = () => {
-    const pswpElement = document.querySelectorAll('.pswp')[0];
+    const pswpElement = document.querySelectorAll('.content .gallery')[0];
 
-    // build items array
-    const items = [{
-      src: 'https://placekitten.com/600/400',
-      w: 600,
-      h: 400,
-    },
-    {
-      src: 'https://placekitten.com/1200/900',
-      w: 1200,
-      h: 900,
-    }];
+    const items = [];
+    $.each($('.content .gallery .gallery-item img'), (key, value) => {
+      items.push({
+        src: value.src,
+        w: value.naturalWidth,
+        h: value.naturalHeight,
+      });
+    });
 
     // define options (if needed)
     const options = {

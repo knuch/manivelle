@@ -1,1 +1,14 @@
-Sidebar in Timber. Add HTML to your hearts content.
+
+<nav arial-label="sidebar" class="nav-sidebar-container">
+  <ol class="nav-sidebar">
+    {% for item in menu.items %}
+      {% if item.current or item.current_item_parent %}
+        {% for child in item.children %}
+          <li class="nav-item">
+            <a href="{{ child.link }}" class="nav-link{% if child.current %} active{% endif %}">{{ child.title }}</a>
+          </li>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </ol>
+</nav>

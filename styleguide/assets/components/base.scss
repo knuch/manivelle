@@ -4,6 +4,7 @@
 @import '../config/variables';
 @import '../config/bootstrap';
 @import '../config/typography';
+@import '../config/layout';
 
 // Don't edit the following sections, they should always be preceded by a blank
 // line and have exactly those names for the `$ yo toolbox:generate` command
@@ -22,6 +23,7 @@
 @import 'molecules/nav/nav';
 @import 'molecules/footer/footer';
 @import 'molecules/gallery/gallery';
+@import 'molecules/table/table';
 
 //
 // organisms:

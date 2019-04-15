@@ -1,0 +1,9 @@
+@charset 'utf-8';
+
+.content .table {
+  margin: 1rem 0 3rem;
+
+  tr:last-child td {
+    border-bottom: 1px solid $gray-300;
+  }
+}

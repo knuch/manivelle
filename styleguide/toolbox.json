@@ -32,8 +32,14 @@
       "node_modules/photoswipe/dist/photoswipe-ui-default.min.js"
     ]
   },
-  "singles": [{
+  "singles": [
+    {
     "src": "node_modules/photoswipe/dist/default-skin/default-skin.png",
     "dest": "../web/app/themes/wise/resources/dist/css/"
-  }]
+    },
+    {
+      "src": "node_modules/photoswipe/dist/default-skin/default-skin.svg",
+      "dest": "../web/app/themes/wise/resources/dist/css/"
+    }
+  ]
 }
