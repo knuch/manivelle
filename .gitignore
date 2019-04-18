@@ -2,6 +2,7 @@
 web/app/plugins/*
 !web/app/plugins/.gitkeep
 web/app/mu-plugins/*/
+!web/app/mu-plugins/advanced-custom-fields-pro
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
@@ -42,3 +43,6 @@ node_modules
 # IDE / OS
 .idea/
 *.DS_Store
+
+web/app/theme/wise/resources/dist/
+web/app/uploads/*

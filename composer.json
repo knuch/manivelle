@@ -40,7 +40,10 @@
     "roots/wordpress": "5.0.3",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
-    "wikimedia/composer-merge-plugin": "^1.4"
+    "wikimedia/composer-merge-plugin": "^1.4",
+    "wpackagist-plugin/wordpress-seo": "^11.0",
+    "wpackagist-plugin/wordfence": "^7.2",
+    "wpackagist-plugin/w3-total-cache": "0.9.7.3"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2",
