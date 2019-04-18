@@ -29,7 +29,7 @@ function create_example() {
     )
   );
 }
-add_action( 'init', 'create_example' );
+//add_action( 'init', 'create_example' );
 
 /**
  * Hide default taxonomy metabox

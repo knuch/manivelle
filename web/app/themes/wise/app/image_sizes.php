@@ -3,14 +3,18 @@
      * To add some image sizes.
      */
 
-CONST IMAGES_SIZES = [
-/*  ['image_1600px', 1600, 1067],
-    ['image_1600px_retina', 3200, 2134],
-    ['image_1140px', 1140, 760],
-    ['image_1140px_retina', 2280, 1521] */
+$image_sizes = [
+    ['sm', 464, 261],
+    ['md', 704, 396],
+    ['lg', 912, 513],
 ];
 
-foreach (IMAGES_SIZES as $image) {
+
+foreach($image_sizes as $img) {
+    array_push($image_sizes, [ $img[0].'_retina', $img[1]*2, $img[2]*2] );
+}
+
+foreach ($image_sizes as $image) {
     add_image_size($image[0], $image[1], $image[2], ['center', 'top']);
 }
 
@@ -20,5 +24,5 @@ CONST IMAGES_SIZES_WITHOUT_CROPING = [
 ];
 
 foreach (IMAGES_SIZES_WITHOUT_CROPING as $image) {
-    add_image_size($image[0], $image[1], $image[2], false);
+    //add_image_size($image[0], $image[1], $image[2], false);
 }

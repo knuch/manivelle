@@ -8,7 +8,7 @@ set :stage, :production
 
 # Extended Server Syntax
 # ======================
-server 'lcth.ftp.infomaniak.com', user: 'lcth_ssh_knuch', roles: %w{web app db}
+server 'd96ka.ftp.infomaniak.com', user: 'd96ka_fkn', roles: %w{web app db}
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
