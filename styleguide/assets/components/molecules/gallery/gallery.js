@@ -4,11 +4,12 @@ import PhotoSwipe from 'photoswipe';
 import PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default';
 
 export default () => {
-  const openPhotoswipe = () => {
-    const pswpElement = document.querySelectorAll('.content .gallery')[0];
+  const openPhotoswipe = (e) => {
+    const pswpElement = $('.pswp')[0];
+    const galleryContainer = $(e.target).parentsUntil('.gallery').parent();
 
     const items = [];
-    $.each($('.content .gallery .gallery-item img'), (key, value) => {
+    $.each($('.full_img', galleryContainer), (key, value) => {
       items.push({
         src: value.src,
         w: value.naturalWidth,
@@ -16,11 +17,13 @@ export default () => {
       });
     });
 
+    const index = $(e.target).parent().index();
+
     // define options (if needed)
     const options = {
       // optionName: 'option value'
       // for example:
-      index: 0, // start at first slide
+      index, // start at first slide
       history: false,
       bgOpacity: 0.7,
       // Buttons/elements
@@ -38,7 +41,7 @@ export default () => {
     gallery.init();
   };
 
-  $('.gallery-open').on('click', () => {
-    openPhotoswipe();
+  $('.gallery-open').on('click', (e) => {
+    openPhotoswipe(e);
   });
 };

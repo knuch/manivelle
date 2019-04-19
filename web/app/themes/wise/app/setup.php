@@ -25,6 +25,7 @@ add_action('wp_enqueue_scripts', function () {
     /**
      * scripts
      */
+    wp_enqueue_script('wise/vendors-bundle', asset_path('js/vendors.bundle.js'), ['jquery'], null, true);
     wp_enqueue_script('wise/vendors', asset_path('js/vendors.min.js'), ['jquery'], null, true);
 
     /**
