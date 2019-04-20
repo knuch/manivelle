@@ -11,7 +11,7 @@ namespace :wp do
   end
 
   desc "Regenerate medias"
-  task :rewrite_flush do
+  task :media_regenerate do
     on roles(:app) do
       within release_path do
         execute 'wp', 'media', 'regenerate', '--only-missing', '--yes'
