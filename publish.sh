@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DIRECTORY="web/app/themes/wise/resources/dist"
+DIRECTORY="../web/app/themes/wise/resources/dist"
 STYLEGUIDE_DIR="styleguide/"
 BRANCH="dist/frontend"
 BRANCH_BLOCKS="dist/blocks"
