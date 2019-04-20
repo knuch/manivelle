@@ -1,5 +1,6 @@
 set :stage, :production
 
+
 # Simple Role Syntax
 # ==================
 #role :app, %w{deploy@example.com}
@@ -28,4 +29,7 @@ after "deploy:finished", "wp:media_regenerate"
 
 fetch(:default_env).merge!(wp_env: :production)
 
-SSHKit.config.command_map[:composer] = "/opt/php7.2/bin/php -d allow_url_fopen=1 #{shared_path.join("composer.phar")}"
+phpbin = "/opt/php7.2/bin/php"
+
+SSHKit.config.command_map[:composer] = "#{phpbin} #{shared_path.join("composer.phar")}"
+SSHKit.config.command_map[:wp] = "#{phpbin} #{shared_path.join("wp-cli.phar")}"
