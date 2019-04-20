@@ -23,6 +23,8 @@ server 'd96ka.ftp.infomaniak.com', user: 'd96ka_fkn', roles: %w{web app db}
 # Get the corresponding styleguide & blocks
 after "deploy:finished", "styleguide:build_from_git"
 after "deploy:finished", "blocks:pull_blocks_from_git"
+after "deploy:finished", "wp:rewrite_flush"
+after "deploy:finished", "wp:media_regenerate"
 
 fetch(:default_env).merge!(wp_env: :production)
 
