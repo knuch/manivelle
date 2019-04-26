@@ -15,7 +15,6 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('wise/style', asset_path('css/base.css'), false, null);
     wp_enqueue_style('wise/vendors', asset_path('css/vendors.min.css'), false, null);
 
-
     /**
      * Jquery (forcing our version over the default wordpress one)
      */

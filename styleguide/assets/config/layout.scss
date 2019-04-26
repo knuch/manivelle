@@ -28,9 +28,9 @@
   display: grid;
   grid-template-columns: [full-start] 0 [content-start] 1fr [content-end] 0 [full-end];
 
-    @include media-breakpoint-up(md) {
-      grid-template-columns: [full-start] 1fr [content-start] 570px [content-end] 1fr [full-end];
-    }
+  @include media-breakpoint-up(md) {
+    grid-template-columns: [full-start] 1fr [content-start] 570px [content-end] 1fr [full-end];
+  }
 
   & > *,
   .grid-content {
