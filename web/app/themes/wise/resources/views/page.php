@@ -29,5 +29,6 @@ $context['post'] = $post;
  * breadcrumb
  */
 $context['breadcrumb'] = get_breadcrumb($post);
+$context['hero'] = $post->thumbnail();
 
 Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );
