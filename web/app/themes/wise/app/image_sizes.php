@@ -11,13 +11,12 @@ $image_sizes = [
     ['hero_lg', '1700', '300'],
 ];
 
-
 foreach($image_sizes as $img) {
     array_push($image_sizes, [ $img[0].'_retina', $img[1]*2, $img[2]*2] );
 }
 
 foreach ($image_sizes as $image) {
-    add_image_size($image[0], $image[1], $image[2], ['center', 'top']);
+    add_image_size($image[0], $image[1], $image[2], ['center', 'center']);
 }
 
 CONST IMAGES_SIZES_WITHOUT_CROPING = [
