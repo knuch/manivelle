@@ -38,30 +38,16 @@
 		{% endblock %}
 
 		<div class="main-container">
-			{% block breadcrumb %}
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-12">
-						{% include 'partials/breadcrumb.twig' %}
-						{#% include "@organisms/breadcrumb/breadcrumb.twig" %#}
-					</div>
-				</div>
-			</div>
-			{% endblock %}
 
-			<main class="container" role="main">
+			<main class="container pt-5" role="main">
 				<div class="row justify-content-center">
-					<div class="sidebar col-md-4">
+
+					<div class="sidebar col-8 col-md-3">
 						{% block title %}
-							<h1 class="main-title">{{post.title}}</h1>
-						{% endblock %}
-						{% block sidebar %}
-							<div class="d-none d-md-block">
-								{% include "sidebar.twig" %}
-							</div>
+								<h1 class="main-title">{{post.title}}</h1>
 						{% endblock %}
 					</div>
-					<div class="content col-md-8 pt-4">
+					<div class="content col-md-9 pt-4">
 						{% block content %}
 						{% endblock %}
 					</div>

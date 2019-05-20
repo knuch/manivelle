@@ -11,7 +11,7 @@ h1.main-title {
   font-size: $font-size-base * 1.5;
   font-weight: 400;
   color: $maniv;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 
   @include media-breakpoint-up(md) {
     margin-bottom: 3rem;
