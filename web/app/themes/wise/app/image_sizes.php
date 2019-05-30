@@ -24,7 +24,7 @@ CONST IMAGES_SIZES_WITHOUT_CROPING = [
     ['full_lg', '1920', '1080'],
     ['body_sm', 464, 261],
     ['body_md', 704, 396],
-    ['body_lg', 912, 513],
+    ['body_lg', 912, 912],
 ];
 
 foreach($image_sizes as $img) {
