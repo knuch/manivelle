@@ -23,12 +23,16 @@
   &:after {
     content: '\201D';
     right: 0;
-    bottom: -1.8rem;
+    bottom: -0.5rem;
     line-height: 3rem;
   }
 
-  & + cite {
-    padding: 0 2.5rem;
+  p {
+    margin: 0;
+  }
+
+  cite {
+    padding: 0 2.5rem 0 0;
     font-size: 90%;
     margin-top: -1.8rem;
     margin-bottom: 3.5rem;
