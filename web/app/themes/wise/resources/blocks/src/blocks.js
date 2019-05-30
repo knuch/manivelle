@@ -13,6 +13,20 @@ import './block/block.js';
 import './intro/block.js';
 
 window.onload = () => {
-  wp.blocks.unregisterBlockStyle( 'core/quote', 'large' );
-  wp.blocks.unregisterBlockStyle( 'core/quote', 'default' );
+	wp.blocks.unregisterBlockStyle( 'core/quote', 'large' );
+	wp.blocks.unregisterBlockStyle( 'core/quote', 'default' );
+
+	// Our filter function
+	function setBlockCustomClassName( className, blockName ) {
+		return blockName === 'core/table' ?
+			'wp-block-table table' :
+			className;
+	}
+
+	// Adding the filter
+	wp.hooks.addFilter(
+		'blocks.getBlockDefaultClassName',
+		'wise/set-block-custom-class-name',
+		setBlockCustomClassName
+	);
 };
