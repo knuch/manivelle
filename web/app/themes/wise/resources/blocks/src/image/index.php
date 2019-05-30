@@ -1,9 +1,14 @@
 <?php
 
-function as_blocks_image_render( $attributes ) {
+function as_blocks_image_render( $attributes, $serialized ) {
+	$context = Timber::get_context();
+
+	// caption
+	preg_match_all('/<figcaption>(.*?)<\/figcaption>/s', $serialized, $matches);
+	$context['figcaption'] = reset($matches[1]);
+
 	$img = new TimberImage($attributes['id']);
 
-	$context = Timber::get_context();
 	$context['img'] = $img;
 	$output = Timber::compile( 'view.twig', $context );
 	return $output;
