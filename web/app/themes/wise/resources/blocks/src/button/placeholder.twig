@@ -1,0 +1,4 @@
+{% set title = block.title|default('Unknown block') %}
+<div class="block-placeholder">
+  Block: {{ (block and block.title) ? block.title : 'Unknown block' }}
+</div>

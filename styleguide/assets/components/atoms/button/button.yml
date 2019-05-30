@@ -1,0 +1,12 @@
+title: Button
+name: button
+# wrapper: 'bg-dark'
+variants:
+  - name: states
+    title: Primary states preview
+  - name: variants
+    title: Variants
+  - name: sizes
+    title: Sizes preview
+  - name: icons
+    title: With icons

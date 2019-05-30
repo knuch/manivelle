@@ -46,6 +46,14 @@
     margin-bottom: 4rem;
   }
 
+  > .block-button {
+    margin-bottom: 2rem;
+
+    & + .block-button {
+      margin-top: -1rem;
+    }
+  }
+
   p,
   li,
   strong,

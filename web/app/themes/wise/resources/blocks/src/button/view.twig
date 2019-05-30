@@ -1,0 +1,11 @@
+{% if fields.type == 'file' %}
+	{% set href = fields.file.guid %}
+{% elseif fields.type == 'link' %}
+	{% set href = fields.url %}
+{% endif %}
+
+<div class="block-button">
+	<a href="{{ href }}" class="btn btn-outline-maniv" {% if fields.open_in_new_tab == 1 or fields.type == 'file' %}target="_blank"{% endif %}>
+		{{ fields.title }}
+	</a>
+</div>

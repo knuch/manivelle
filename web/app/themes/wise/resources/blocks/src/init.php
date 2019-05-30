@@ -70,7 +70,8 @@ function as_blocks_allowed_block_types( $allowed_blocks, $post = null ) {
 		'core/quote',
 		'core/table',
 		'core/columns',
-		'as/intro'
+		'as/intro',
+		'acf/button'
 	);
 
 	if( $post && $post->post_type === 'shortcode_page' ) {
