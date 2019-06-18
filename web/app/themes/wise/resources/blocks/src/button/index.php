@@ -10,7 +10,7 @@ function as_acf_init_button() {
 	if( function_exists('acf_register_block') ) {
 		acf_register_block(array(
 			'name'				=> 'button',
-			'title'				=> _x('Button','Gutenberg block', 'lang'),
+			'title'				=> _x('Bouton','Gutenberg block', 'lang'),
 			'description'		=> _x('A custom button block.','Gutenberg block', 'lang'),
 			'render_callback'	=> 'as_button_block_render',
 			'category'			=> 'formatting',
