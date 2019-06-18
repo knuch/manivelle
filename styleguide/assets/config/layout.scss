@@ -4,7 +4,8 @@
   margin-top: 0 !important;
 }
 
-.content .wp-block-columns {
+.content .wp-block-columns,
+.content .wp-block-table {
   grid-column: full;
 }
 

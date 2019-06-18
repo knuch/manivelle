@@ -15,6 +15,10 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+
+  @include media-breakpoint-up(md) {
+    min-height: 3.2rem;
+  }
 }
 
 .header .separator {
