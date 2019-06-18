@@ -25,8 +25,6 @@
 }
 
 .content {
-  display: flex;
-  flex-flow: column nowrap;
   display: grid;
   grid-template-columns: [full-start] 0 [content-start] 1fr [content-end] 0 [full-end];
 
@@ -37,7 +35,6 @@
   & > *,
   .grid-content {
     grid-column: content;
-    display: inline-block;
   }
 
   .grid-full {
