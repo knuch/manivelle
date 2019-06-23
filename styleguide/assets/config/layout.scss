@@ -5,8 +5,10 @@
 }
 
 .content .wp-block-columns,
+.content .wp-block-video,
 .content .wp-block-table {
   grid-column: full;
+  width: 100%;
 }
 
 @include media-breakpoint-up(md) {
@@ -71,7 +73,8 @@
   p,
   li,
   strong,
-  blockquote {
+  blockquote,
+  table {
     a {
       color: $maniv;
     }

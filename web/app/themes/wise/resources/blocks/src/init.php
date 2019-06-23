@@ -69,9 +69,11 @@ function as_blocks_allowed_block_types( $allowed_blocks, $post = null ) {
 		'core/list',
 		'core/quote',
 		'core/table',
+		'core/video',
 		'core/columns',
 		'as/intro',
-		'acf/button'
+		'acf/button',
+		'acf/button-group',
 	);
 
 	if( $post && $post->post_type === 'shortcode_page' ) {

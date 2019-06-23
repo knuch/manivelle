@@ -60,7 +60,7 @@ array_map(
 		if ( ! locate_template( $file, true, true ) ) {
 			$sage_error( sprintf( __( 'Error locating <code>%s</code> for inclusion.', 'sage' ), $file ), 'File not found' );
 		}
-	}, [ 'helpers', 'setup', 'filters', 'admin', 'timber', 'comments', 'cpt', 'twig', 'acf_bidirectional', 'image_sizes', 'timber_helpers', 'blocks' ]
+	}, [ 'helpers', 'setup', 'filters', 'admin', 'timber', 'comments', 'cpt', 'twig', 'acf_bidirectional', 'helperClass', 'image_sizes', 'timber_helpers', 'blocks' ]
 );
 
 /**
