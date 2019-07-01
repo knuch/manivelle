@@ -1,0 +1,23 @@
+@charset 'utf-8';
+
+.content ol.history {
+  .year {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: $maniv;
+    transform: translateX(-30px);
+  }
+
+  li {
+    list-style-type: none;
+
+    &:before {
+      content: none;
+    }
+
+    & + li {
+      margin-top: 1rem;
+    }
+  }
+}

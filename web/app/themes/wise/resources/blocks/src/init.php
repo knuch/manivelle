@@ -74,6 +74,7 @@ function as_blocks_allowed_block_types( $allowed_blocks, $post = null ) {
 		'as/intro',
 		'acf/button',
 		'acf/button-group',
+		'acf/history',
 	);
 
 	if( $post && $post->post_type === 'shortcode_page' ) {

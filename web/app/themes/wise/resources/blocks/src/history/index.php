@@ -10,12 +10,12 @@ use App\Helper;
 add_action('acf/init', function() {
 	if( function_exists('acf_register_block') ) {
 		acf_register_block(array(
-			'name'				    => 'button-group',
-			'title'				    => _x('Groupe de boutons','Gutenberg block', 'lang'),
+			'name'				    => 'history',
+			'title'				    => _x('Historique','Gutenberg block', 'lang'),
 			'description'		  => _x('A custom button block.','Gutenberg block', 'lang'),
 			'category'			  => 'formatting',
-			'icon'				    => 'feedback',
-			'keywords'		  	=> array( 'button'),
+			'icon'				    => 'calendar-alt			',
+			'keywords'		  	=> array( 'historique'),
 			'supports'        => array('align' => false) ,
 			'align'           => 'wide' ,
 			'render_callback'	=> function( $block ) {
@@ -24,7 +24,7 @@ add_action('acf/init', function() {
 				$context['block'] = $block;
 
 				// empty block
-				if ($block['data']['buttons'] == null) {
+				if ($block['data']['years'] == null) {
 					echo Timber::compile( 'render/placeholder.twig', $context );
 				}
 				// block with data
