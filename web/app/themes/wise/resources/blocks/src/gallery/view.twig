@@ -1,8 +1,0 @@
-<div class="gallery">
-	{% for img in gallery %}
-		<div class="gallery-item gallery-open">
-			<img class="d-none full_img" src="{{ img.src() }}" alt="{{ img.caption }}">
-			<img class="img-fluid" src="{{ img.src('square_md') }}" alt="{{ img.caption }}">
-		</div>
-	{% endfor %}
-</div>
