@@ -6,7 +6,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc sic expositum dissi
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. An vero displicuit ea, quae tributa est animi virtutibus tanta praestantia? Paulum, cum regem Persem captum adduceret, eodem flumine invectio? Hic, qui utrumque probat, ambobus debuit uti, sicut facit re, neque tamen dividit verbis. Quid iudicant sensus? Sed ille, ut dixi, vitiose. Duo Reges: constructio interrete.
 
-## Un autre titre 2
+### Un titre 3
 
 Lorem ipsum dolor sit amet, [consectetur adipiscing](https://google.com) elit. Egone quaeris, inquit, quid sentiam? Quae cum magnifice primo dici viderentur, considerata minus probabantur. Hoc dixerit potius Ennius: Nimium boni est, cui nihil est mali. Sed eum qui audiebant, quoad poterant, defendebant sententiam suam. Quis non odit sordidos, vanos, leves, futtiles? Istam voluptatem perpetuam quis potest praestare sapienti? Nam si propter voluptatem, quae est ista laus, quae possit e macello peti? Duo Reges: constructio interrete.
 
