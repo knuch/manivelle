@@ -14,7 +14,7 @@ add_action('acf/init', function() {
 			'title'				    => _x('Historique','Gutenberg block', 'lang'),
 			'description'		  => _x('A custom button block.','Gutenberg block', 'lang'),
 			'category'			  => 'formatting',
-			'icon'				    => 'calendar-alt			',
+			'icon'				    => 'info-outline',
 			'keywords'		  	=> array( 'historique'),
 			'supports'        => array('align' => false) ,
 			'align'           => 'wide' ,
